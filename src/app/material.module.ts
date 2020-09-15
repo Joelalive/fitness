@@ -5,7 +5,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
-import { MatCardModule, MatCheckboxModule, MatDialogModule, MatListModule, MatProgressSpinnerModule, MatSelectModule, MatSidenavModule, MatTabsModule, MatToolbarModule } from '@angular/material';
+import { MatCardModule, MatCheckboxModule, MatDialogModule, MatListModule, MatProgressSpinnerModule, MatSelectModule, MatSidenavModule, MatSortModule, MatTableModule, MatTabsModule, MatToolbarModule } from '@angular/material';
 
 @NgModule({
 
@@ -24,7 +24,9 @@ import { MatCardModule, MatCheckboxModule, MatDialogModule, MatListModule, MatPr
         MatTabsModule,
         MatCardModule,
         MatProgressSpinnerModule,
-        MatDialogModule
+        MatDialogModule,
+        MatTableModule,
+        MatSortModule
     ],
     exports: [
         MatButtonModule,
@@ -41,7 +43,9 @@ import { MatCardModule, MatCheckboxModule, MatDialogModule, MatListModule, MatPr
         MatTabsModule,
         MatCardModule,
         MatProgressSpinnerModule,
-        MatDialogModule
+        MatDialogModule,
+        MatTableModule,
+        MatSortModule
     ]
 
 })

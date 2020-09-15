@@ -4,6 +4,7 @@ import { LoginComponent } from './auth/login/login.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AuthGuard } from './auth/auth.guard';
 
 
 const routes: Routes = [
@@ -22,7 +23,8 @@ const routes: Routes = [
   },
   {
     path: 'training',
-    component: TrainingComponent
+    component: TrainingComponent,
+    canActivate: [AuthGuard]
   }
 ];
 
