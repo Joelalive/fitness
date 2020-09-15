@@ -1,7 +1,7 @@
 import { Exercise } from './../exercise.model';
 import { TrainingService } from './../training.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatSort, MatTableDataSource } from '@angular/material';
+import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
 
 @Component({
   selector: 'app-past-training',
@@ -16,6 +16,9 @@ export class PastTrainingComponent implements OnInit {
 
   @ViewChild(MatSort, { static:true }) sort: MatSort;
 
+  @ViewChild(MatPaginator, { static:true }) paginator: MatPaginator;
+
+
   constructor(private trainingService: TrainingService) { }
 
   ngAfterViewInit() {
@@ -24,6 +27,7 @@ export class PastTrainingComponent implements OnInit {
 
   ngOnInit() {
     this.dataSource.data = this.trainingService.getCompletedOrCancelledExercise();
+    this.dataSource.paginator = this.paginator;
   }
 
   onFilter(filterValue: string) {
